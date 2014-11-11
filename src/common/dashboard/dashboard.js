@@ -12,7 +12,7 @@
  * The dependencies block here is also where component dependencies should be
  * specified, as shown below.
  */
-angular.module( 'ngBoilerplate.login', [
+angular.module( 'ngBoilerplate.dashboard', [
     'ui.router',
     'plusOne'
 ])
@@ -23,22 +23,20 @@ angular.module( 'ngBoilerplate.login', [
  * this way makes each module more "self-contained".
  */
     .config(function config( $stateProvider ) {
-        $stateProvider.state( 'login', {
-            url: '/login',
+        $stateProvider.state( 'dashboard', {
+            url: '/dashboard',
             views: {
                 "main": {
-                    controller: 'LoginCtrl',
-                    templateUrl: 'login/login.tpl.html'
+                    controller: 'DashboardCtrl',
+                    templateUrl: 'dashboard/dashboard.tpl.html'
                 }
             },
-            data:{ pageTitle: 'Login' }
+            data:{ pageTitle: 'DashBoard' }
         });
     })
 
 /**
  * And of course we define a controller for our route.
  */
-    .controller( 'LoginCtrl', function HomeController( $scope ) {
-    })
-;
-
+    .controller( 'DashboardCtrl', function HomeController( $scope ) {
+    });

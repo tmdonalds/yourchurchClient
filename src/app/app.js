@@ -3,6 +3,7 @@ angular.module( 'ngBoilerplate', [
   'templates-common',
   'ngBoilerplate.home',
   'ngBoilerplate.about',
+  'ngBoilerplate.login',
   'ui.router'
 ])
 
@@ -19,6 +20,13 @@ angular.module( 'ngBoilerplate', [
       $scope.pageTitle = toState.data.pageTitle + ' | ngBoilerplate' ;
     }
   });
-})
 
-;
+  $scope.main = {};
+  $scope.dashboard = {};
+
+  console.log('loading');
+
+  $scope.authorized = false;
+  $scope.main.url = "/main";
+  $scope.dashboard.url = "/dashboard";
+});
